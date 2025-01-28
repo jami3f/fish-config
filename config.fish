@@ -1,5 +1,5 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+# Commands to run in interactive sessions can go here
 end
 
 # Abbreviations
@@ -24,5 +24,9 @@ set PATH $PATH /Users/James.Fairhurst@computacenter.com/.local/bin
 # Created by `pipx` on 2024-11-06 13:01:42
 set PATH $PATH /home/jamie/.local/bin
 set PATH $PATH $HOME/.local/bin
+if type -q zoxide
 zoxide init fish | source
+end
+if type -q pyenv
 pyenv init - fish | source
+end
