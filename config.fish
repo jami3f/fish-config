@@ -10,3 +10,4 @@ set PATH $PATH /Users/James.Fairhurst@computacenter.com/.local/bin
 set PATH $PATH /home/jamie/.local/bin
 set PATH $PATH $HOME/.local/bin
 zoxide init fish | source
+pyenv init - fish | source
