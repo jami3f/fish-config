@@ -3,7 +3,7 @@ function __kubectl.init
     set -l name $argv[1]
     set -l body $argv[2..-1]
     # global scope abbr is default in fish 3.6.0+
-    abbr -a -g $name $body
+    abbr -a --position anywhere -g $name $body
 
     set -a __kubectl_plugin_abbreviations $name
   end
