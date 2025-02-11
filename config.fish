@@ -10,7 +10,7 @@ set tide_context_color_root EA4649
 
 # Abbreviations
 abbr -a l ls -la
-abbr -a --position anywhere --set-cursor L % | less
+abbr -a --position anywhere --set-cursor L "% | less"
 
 abbr -a --position anywhere kgnims kubectl get nimservices.apps.nvidia.com
 abbr -a --position anywhere kgnimsw kubectl get nimservices.apps.nvidia.com --watch
