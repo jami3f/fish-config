@@ -43,3 +43,6 @@ end
 if type -q pyenv
 pyenv init - fish | source
 end
+if type -q thefuck
+thefuck --alias | source
+end
