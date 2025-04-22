@@ -23,7 +23,7 @@ abbr -a --position anywhere kdnimc kubectl describe nimcaches.apps.nvidia.com
 abbr -a --position anywhere kdelnimc kubectl delete nimcaches.apps.nvidia.com
 
 abbr -a --position anywhere kgjo kubectl get jobs
-abbr -a --position anywhere kgjo kubectl get jobs --watch
+abbr -a --position anywhere kgjow kubectl get jobs --watch
 abbr -a --position anywhere kdjo kubectl describe jobs
 abbr -a --position anywhere kdeljo kubectl delete jobs
 
