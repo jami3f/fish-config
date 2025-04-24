@@ -22,6 +22,11 @@ abbr -a --position anywhere kgnimcw kubectl get nimcaches.apps.nvidia.com --watc
 abbr -a --position anywhere kdnimc kubectl describe nimcaches.apps.nvidia.com
 abbr -a --position anywhere kdelnimc kubectl delete nimcaches.apps.nvidia.com
 
+abbr -a --position anywhere kgjo kubectl get jobs
+abbr -a --position anywhere kgjow kubectl get jobs --watch
+abbr -a --position anywhere kdjo kubectl describe jobs
+abbr -a --position anywhere kdeljo kubectl delete jobs
+
 abbr -a --set-cursor kpfn kubectl port-forward --namespace=ingress-nginx --address 0.0.0.0 service/ingress-nginx-controller %:443
 
 # Created by `pipx` on 2024-11-05 17:16:41
@@ -30,7 +35,8 @@ set PATH $PATH /Users/James.Fairhurst@computacenter.com/.local/bin
 # Created by `pipx` on 2024-11-06 13:01:42
 set PATH $PATH /home/jamie/.local/bin
 set PATH $PATH $HOME/.local/bin
-set PATH $PATH /Applications/WezTerm.app/Contents/MacOS
+set PATH $PATH $HOME/ngc-cli
+set PATH $PATH $HOME/.runai/bin
 
 if type -q zoxide
 zoxide init fish | source
@@ -38,8 +44,9 @@ end
 if type -q pyenv
 pyenv init - fish | source
 end
-
+if type -q thefuck
 thefuck --alias | source
+end
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/James.Fairhurst@computacenter.com/.cache/lm-studio/bin
@@ -47,7 +54,7 @@ set -gx PATH $PATH /Users/James.Fairhurst@computacenter.com/.cache/lm-studio/bin
 # pnpm
 set -gx PNPM_HOME "/Users/James.Fairhurst@computacenter.com/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
