@@ -36,6 +36,7 @@ set PATH $PATH /Users/James.Fairhurst@computacenter.com/.local/bin
 set PATH $PATH /home/jamie/.local/bin
 set PATH $PATH $HOME/.local/bin
 set PATH $PATH $HOME/ngc-cli
+set PATH $PATH $HOME/.runai/bin
 
 if type -q zoxide
 zoxide init fish | source
