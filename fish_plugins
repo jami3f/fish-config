@@ -1,7 +1,2 @@
 jorgebucaran/fisher
-ilancosman/tide@v6
-jorgebucaran/autopair.fish
-jorgebucaran/nvm.fish
-blackjid/plugin-kubectl
-gazorby/docker-abbr
-patrickf1/fzf.fish
+pure-fish/pure

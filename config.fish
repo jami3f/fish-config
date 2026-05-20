@@ -1,5 +1,5 @@
 if status is-interactive
-# Commands to run in interactive sessions can go here
+    # Commands to run in interactive sessions can go here
 end
 
 # Tide config settings
@@ -7,6 +7,8 @@ set tide_left_prompt_items context pwd character
 set tide_right_prompt_items status cmd_duration jobs direnv node python rustc java php pulumi ruby go gcloud kubectl distrobox toolbox terraform aws nix_shell crystal elixir zig
 set tide_context_color_ssh 73C0E2
 set tide_context_color_root EA4649
+
+set -g silent true
 
 # Abbreviations
 abbr -a l ls -la
@@ -27,6 +29,8 @@ abbr -a --position anywhere kgjow kubectl get jobs --watch
 abbr -a --position anywhere kdjo kubectl describe jobs
 abbr -a --position anywhere kdeljo kubectl delete jobs
 
+abbr -a --set-cursor clonedev git clone git@ssh.dev.azure.com:v3/Computacenter-InnHub/InnovationHub/%
+
 abbr -a --set-cursor kpfn kubectl port-forward --namespace=ingress-nginx --address 0.0.0.0 service/ingress-nginx-controller %:443
 
 # Created by `pipx` on 2024-11-05 17:16:41
@@ -39,13 +43,13 @@ set PATH $PATH $HOME/ngc-cli
 set PATH $PATH $HOME/.runai/bin
 
 if type -q zoxide
-zoxide init fish | source
+    zoxide init fish | source
 end
 if type -q pyenv
-pyenv init - fish | source
+    pyenv init - fish | source
 end
 if type -q thefuck
-thefuck --alias | source
+    thefuck --alias | source
 end
 
 # Added by LM Studio CLI (lms)
@@ -54,10 +58,14 @@ set -gx PATH $PATH /Users/James.Fairhurst@computacenter.com/.cache/lm-studio/bin
 # pnpm
 set -gx PNPM_HOME "/Users/James.Fairhurst@computacenter.com/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/Jamie.Fairhurst@computacenter.com/.lmstudio/bin
+# End of LM Studio CLI section
